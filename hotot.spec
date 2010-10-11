@@ -6,22 +6,22 @@
 %define version 0.9.4
 %define release %mkrel 1
 
-Name:%{name}
-Version:%{version}
-Release:%{release}
-Summary:Twitter Client 
-License:GNU GLP
-Group:Applications/Internet
-URL:https://hotot.googlecode.com/hg/
-Source:hotot-%{version}.tar.bz2
-BuildRoot:%{_tmppath}/%{name}-%{version}-%{release}
+Name:       %{name}
+Version:    %{version}
+Release:    %{release}
+Summary:    Twitter Client 
+License:    GNU GLP
+Group:      Networking/Other
+URL:        https://hotot.googlecode.com/hg/
+Source:     hotot-%{version}.tar.bz2
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 
-BuildRequires:intltool
-BuildRequires:python-distutils-extra
-Requires:python-webkitgtk
-Requires:python-notify
-Requires:python-keybinder
+BuildRequires:   intltool
+BuildRequires:   python-distutils-extra
+Requires:        python-webkitgtk
+Requires:        python-notify
+Requires:        python-keybinder
 
 %description
 Hotot, is a lightweight & open source Microblogging Client, coding using Python language
@@ -39,7 +39,7 @@ cd hotot/
 
 rm -rf $RPM_BUILD_ROOT
 
-python setup.py install --prefix=${RPM_BUILD_ROOT}/usr
+python setup.py install --prefix=${RPM_BUILD_ROOT}%{_usr}
 
 %post
 
