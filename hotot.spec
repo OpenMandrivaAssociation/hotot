@@ -10,7 +10,7 @@ Name:       %{name}
 Version:    %{version}
 Release:    %{release}
 Summary:    Twitter Client 
-License:    GNU GLP
+License:    LGPL
 Group:      Networking/Other
 URL:        https://hotot.googlecode.com/hg/
 Source:     hotot-%{version}.tar.bz2
