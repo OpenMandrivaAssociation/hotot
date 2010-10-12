@@ -4,7 +4,7 @@
 
 %define name hotot
 %define version 0.9.4
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:       %{name}
 Version:    %{version}
