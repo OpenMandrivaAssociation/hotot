@@ -40,13 +40,13 @@ cd hotot/
 
 rm -rf $RPM_BUILD_ROOT
 
-<<<<<<< .mine
+
 python setup.py install --root=%{buildroot}\
                           --prefix=%{_prefix} \
                            --install-lib=%{_libdir}/python2.6/site-packages/
-=======
-python setup.py install --prefix=${RPM_BUILD_ROOT}%{_usr}
->>>>>>> .r585250
+
+
+
 
 
 %post
