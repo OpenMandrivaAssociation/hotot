@@ -19,6 +19,7 @@ BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 BuildRequires:   intltool
 BuildRequires:   python-distutils-extra
+BuildRequires:   python-devel
 Requires:        python-webkitgtk
 Requires:        python-notify
 Requires:        python-keybinder
