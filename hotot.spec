@@ -10,6 +10,8 @@ Source0:    http://hotot.googlecode.com/files/hotot-0.9.8.tar.gz
 BuildRequires:   intltool
 BuildRequires:   python-distutils-extra
 BuildRequires:   python-devel
+BuildRequires:   cmake
+BuildRequires:   qt4-devel
 Requires:        python-webkitgtk
 Requires:        python-notify
 Requires:        python-keybinder
