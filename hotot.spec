@@ -1,14 +1,12 @@
 Name:       hotot
-Version:    0.9.5
-Release:    %mkrel 2
+Version:    0.9.8
+Release:    1
 Summary:    Twitter Client 
 License:    LGPL
 Group:      Networking/Other
 URL:        https://hotot.googlecode.com/hg/
-Source0:    http://hotot.googlecode.com/files/hotot-0.9.5_hg~20101108.531.7z
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
+Source0:    http://hotot.googlecode.com/files/hotot-0.9.8.tar.gz
 
-BuildRequires:	 p7zip
 BuildRequires:   intltool
 BuildRequires:   python-distutils-extra
 BuildRequires:   python-devel
@@ -17,23 +15,22 @@ Requires:        python-notify
 Requires:        python-keybinder
 
 %description
-Hotot, is a lightweight & open source Microblogging Client, coding using Python language
+Hotot, is a lightweight & open source
+Microblogging Client, coding using Python language
 and designed for Linux. 
 
 %prep
-rm -rf hotot/
-7z x %SOURCE0
+%setup -q -n shellex-Hotot-c14a972
 
 %build
-
-%clean
-rm -rf $RPM_BUILD_ROOT
+%cmake
 
 %install
-rm -rf $RPM_BUILD_ROOT
-cd hotot/
-python setup.py install --root=%{buildroot}\
-                        --prefix=%{_prefix}
+pushd build
+%makeinstall_std
+popd
+
+%find_lang %{name}
 
 %post
 %{update_menus}
@@ -41,14 +38,24 @@ python setup.py install --root=%{buildroot}\
 %postun
 %{clean_menus}
 
-%files
-%defattr(-,root,root,-)
 
+%files -f %{name}.lang
 %{_bindir}/hotot
-%{python_sitelib}/*
+%{_bindir}/hotot-qt
 %{_datadir}/hotot/ext/*
-%{_datadir}/hotot/ui/*
+%{_datadir}/applications/%{name}-qt.desktop
+%{_datadir}/apps/desktoptheme/default/icons/*.svg
 %{_datadir}/hotot/sound/*.wav
-%{_datadir}/locale/*
+%{_datadir}/%{name}/_locales/*/*
+%{_datadir}/%{name}/js/*
+%{_datadir}/%{name}/css/*
+%{_datadir}/%{name}/theme/*
+%{_datadir}/%{name}/image/*
+%{_datadir}/%{name}/*.html
+%{_datadir}/%{name}/*.json
 %{_datadir}/applications/hotot.desktop
-%{_datadir}/pixmaps/hotot.png
+%{python_sitearch}/*
+%{_iconsdir}/hicolor/*/apps/*.*
+#% {_datadir}/locale/*
+%{_datadir}/%{name}/icons/*/apps/hotot.png
+%{_datadir}/icons/hicolor/scalable/status/*.svg
