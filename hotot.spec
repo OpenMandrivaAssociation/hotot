@@ -46,7 +46,7 @@ popd
 %{_bindir}/hotot-qt
 %{_datadir}/hotot/ext/*
 %{_datadir}/applications/%{name}-qt.desktop
-%{_datadir}/apps/desktoptheme/default/icons/*.svg
+#% {_datadir}/apps/desktoptheme/default/icons/*.svg
 %{_datadir}/hotot/sound/*.wav
 %{_datadir}/%{name}/_locales/*/*
 %{_datadir}/%{name}/js/*
@@ -58,6 +58,5 @@ popd
 %{_datadir}/applications/hotot.desktop
 %{python_sitearch}/*
 %{_iconsdir}/hicolor/*/apps/*.*
-#% {_datadir}/locale/*
 %{_datadir}/%{name}/icons/*/apps/hotot.png
 %{_datadir}/icons/hicolor/scalable/status/*.svg
