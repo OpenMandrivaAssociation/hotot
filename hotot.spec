@@ -56,7 +56,6 @@ popd
 %{_datadir}/%{name}/*.html
 %{_datadir}/%{name}/*.json
 %{_datadir}/applications/hotot.desktop
-%{_datadir}/apps/desktoptheme/default/icons/%{name}_qt.svg
 %{python_sitearch}/*
 %{_iconsdir}/hicolor/*/apps/*.*
 %{_datadir}/%{name}/icons/*/apps/hotot.png
