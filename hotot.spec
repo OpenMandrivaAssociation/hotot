@@ -1,11 +1,11 @@
 Name:       hotot
-Version:    0.9.8
+Version:    0.9.8.7
 Release:    1
 Summary:    Twitter Client 
 License:    LGPL
 Group:      Networking/Other
 URL:        https://hotot.googlecode.com/hg/
-Source0:    http://hotot.googlecode.com/files/hotot-0.9.8.tar.gz
+Source0:    http://hotot.googlecode.com/files/hotot-%{version}.tar.gz
 
 BuildRequires:   intltool
 BuildRequires:   python-distutils-extra
@@ -22,7 +22,7 @@ Microblogging Client, coding using Python language
 and designed for Linux. 
 
 %prep
-%setup -q -n shellex-Hotot-c14a972
+%setup -q -n shellex-Hotot-44272ff
 
 %build
 %cmake
@@ -56,6 +56,7 @@ popd
 %{_datadir}/%{name}/*.html
 %{_datadir}/%{name}/*.json
 %{_datadir}/applications/hotot.desktop
+%{_datadir}/apps/desktoptheme/default/icons/%{name}_qt.svg
 %{python_sitearch}/*
 %{_iconsdir}/hicolor/*/apps/*.*
 %{_datadir}/%{name}/icons/*/apps/hotot.png
