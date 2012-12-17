@@ -56,5 +56,5 @@ and designed for Linux.
 %{_datadir}/applications/hotot.desktop
 %{python_sitearch}/*
 %{_iconsdir}/hicolor/*/apps/*.*
-%{_datadir}/%{name}/icons/*/apps/hotot.png
+%{_datadir}/%{name}/icons/*/apps/hotot.*
 %{_datadir}/icons/hicolor/scalable/status/*.svg
