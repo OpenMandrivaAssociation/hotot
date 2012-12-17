@@ -1,5 +1,5 @@
 Name:       hotot
-Version:    0.9.8.7
+Version:    0.9.8.11
 Release:    1
 Summary:    Twitter Client 
 License:    LGPL
@@ -22,15 +22,13 @@ Microblogging Client, coding using Python language
 and designed for Linux. 
 
 %prep
-%setup -q -n shellex-Hotot-44272ff
+%setup -q -n shellex-Hotot-f32d0fb
 
 %build
 %cmake
 
 %install
-pushd build
-%makeinstall_std
-popd
+%makeinstall_std -C build
 
 %find_lang %{name}
 
@@ -60,34 +58,3 @@ popd
 %{_iconsdir}/hicolor/*/apps/*.*
 %{_datadir}/%{name}/icons/*/apps/hotot.png
 %{_datadir}/icons/hicolor/scalable/status/*.svg
-
-
-%changelog
-* Tue Jun 05 2012 Alexander Khrukin <akhrukin@mandriva.org> 0.9.8.7-1
-+ Revision: 802697
-- hotot_qt4 removed
-- version update 0.9.8.7
-
-* Thu Apr 26 2012 Alexander Khrukin <akhrukin@mandriva.org> 0.9.8-1
-+ Revision: 793502
-- file not found fix
-- BR:cmake qt4
-- version update 0.9.8
-
-* Fri Nov 12 2010 Bogdano Arendartchuk <bogdano@mandriva.com> 0.9.5-2mdv2011.0
-+ Revision: 597002
-- new version 0.9.5
-- changed it to use upstream archives
-- new build require: 7z
-
-* Tue Oct 12 2010 Juan Luis Baptiste <juancho@mandriva.org> 0.9.4-2mdv2011.0
-+ Revision: 585253
-- Added missing python-devel BuildRequires.
-- Fixed license
-- Fixed some rpmlint warnings and some style issues.
-
-  + Gonzalo Igartua <legion@mandriva.org>
-    - Modified setup python setup.py install adding --install-lib
-    - Modified setup python setup.py install adding --install-lib
-    - import hotot
-
