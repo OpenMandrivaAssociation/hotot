@@ -1,6 +1,6 @@
 Name:       hotot
 Version:    0.9.8.11
-Release:    1
+Release:    2
 Summary:    Twitter Client 
 License:    LGPL
 Group:      Networking/Other
@@ -31,13 +31,6 @@ and designed for Linux.
 %makeinstall_std -C build
 
 %find_lang %{name}
-
-%post
-%{update_menus}
-
-%postun
-%{clean_menus}
-
 
 %files -f %{name}.lang
 %{_bindir}/hotot
