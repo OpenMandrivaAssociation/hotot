@@ -1,6 +1,6 @@
 Name:       hotot
 Version:    0.9.8.11
-Release:    2
+Release:    3
 Summary:    Twitter Client 
 License:    LGPL
 Group:      Networking/Other
